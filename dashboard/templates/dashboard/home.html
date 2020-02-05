@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ setting.title }}">
+  <meta name="author" content="{{ setting.domain }}">
+  <title>{{ setting.title }}</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'account/assets/img/brand/favicon.png' %}" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="{% static 'account/assets/libs/@fortawesome/fontawesome-free/css/all.min.css' %}"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="{% static 'account/assets/css/purpose.css' %}" id="stylesheet">
+</head>
+<!--===============================================-->
+<!--    Body-->
+<!--===============================================-->
+<body class="application application-offset">
+
+
+
+  <!-- ============================================-->
+  <!-- Basic section ==============================-->
+  <div class="container-fluid container-application">
+   
+   
+   
+    <!-- ============================================-->
+    <!-- Navbar left ================================-->
+    {% include "dashboard/basic/header-left.html" %}
+    <!-- ============================================-->
+    <!-- close left navbar ==========================-->
+    
+    
+    
+    <!-- ============================================-->
+    <!-- Main content================================-->
+    <div class="main-content position-relative">
+      
+      
+      
+      <!-- ============================================-->
+      <!-- Navbar main ================================-->
+      {% include "dashboard/basic/header.html" %}
+      <!-- ============================================-->
+      <!-- close mainr ================================-->
+      
+      
+      
+      <!-- ============================================-->
+      <!-- Page content================================-->
+      <div class="page-content">
+        <!-- Listing -->
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header actions-toolbar border-0">
+            <div class="actions-search" id="actions-search">
+              <div class="input-group input-group-merge input-group-flush">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                </div>
+                <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
+                <div class="input-group-append">
+                  <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="fas fa-times"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+              <div class="col">
+                <h6 class="d-inline-block mb-0">Job offers for your company</h6>
+              </div>
+              <div class="col text-right">
+                <div class="actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="btn btn-dark btn-sm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Post job <i class="fas fa-plus"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Table -->
+          <div class="table-responsive mb-5">
+            <table class="table align-items-center mb-0">
+              
+
+              <thead>
+                <tr>
+                  <th scope="col" class="sort" data-sort="name">Title</th>
+                  <th scope="col" class="sort" data-sort="budget">Off data</th>
+                  <th scope="col" class="sort" data-sort="status">Actual status</th>
+                  <th scope="col" class="sort text-right" data-sort="completion">Action</th>
+                </tr>
+              </thead>
+              <tbody class="list">
+              
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-primary text-white">SM</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Sales Manager - DE</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-warning text-white">IT</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">IT support, Full remote</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-success text-white">SM</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Sales Manager - Poland</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-dark text-white">SM</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Contact Center salles - USA</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-success text-dark">AF</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Auditor - finance - UK</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-primary text-white">B4</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Front Developer - Remote</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div>
+                        <span class="avatar bg-dark text-white">SM</span>
+                      </div>
+                      <div class="media-body ml-4">
+                        <a href="overview.html" class="name mb-0 h6 text-sm">Sales Manager - Poland</a>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    11.25.2021
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i>
+                      <span class="status">Activate</span>
+                    </span>
+                  </td>
+                  <td class="text-right">
+                    <button class="btn btn-sm btn-outline-primary">See <i class="far fa-eye ml-1"></i></button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                    <button class="btn btn-sm btn-secondary">Edit</button>
+                    <button class="btn btn-sm btn-warning">Go VIP</button>
+                  </td>
+                </tr>
+
+              </tbody>
+              
+              
+            </table>
+          </div>
+        </div>
+        <!-- Load more -->
+      </div>
+      <!-- ============================================-->
+      <!-- Close age content===========================-->
+      
+      
+      
+      <!--===============================================-->
+      <!--    Footer-->
+      <!--===============================================-->
+      {% include "dashboard/basic/footer.html" %}
+
+
+
+    </div>
+  </div>
+  <!-- Scripts -->
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="{% static 'account/assets/js/purpose.core.js' %}"></script>
+  <!-- Page JS -->
+  <script src="{% static 'account/assets/libs/autosize/dist/autosize.min.js' %}"></script>
+  <script src="{% static 'account/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+  <!-- Purpose JS -->
+  <script src="{% static 'account/assets/js/purpose.js' %}"></script>
+  <!-- Demo JS - remove it when starting your project -->
+  <script src="{% static 'account/assets/js/demo.js' %}"></script>
+</body>
+
+</html>

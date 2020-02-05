@@ -1,0 +1,310 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="GieldaKonopna.net ogłoszenia z branży konopnej | Szczegóły ogłoszenia.">
+  <meta name="author" content="GieldaKonopna.net">
+  <title>GieldaKonopna.net ogłoszenia z branży konopnej | Szczegóły ogłoszenia.</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="{% static 'assets/libs/@fortawesome/fontawesome-free/css/all.min.css' %}"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="{% static 'assets/css/purpose.css' %}" id="stylesheet">
+  <link rel="stylesheet" href="{% static 'assets/libs/swiper/dist/css/swiper.min.css' %}">
+  <!-- fancy bix -->
+  <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+</head>
+
+<body>
+  <!--================================================================header section==============================================================================-->
+</head>
+
+<body>
+  <!--=====================================================================HEADER=================================================================================-->
+  <!-- ============================================-->
+  <!-- Include header =============================-->
+  {% include "basic/header.html" %}
+  <!-- close ======================================-->
+  <!-- ============================================-->
+  
+  <!-- Omnisearch -->
+  <div class="main-content">
+    <!-- Title side -->
+    <section class="slice slice-sm bg-gradient-primary">
+      <div class="container pt-4"></div>
+    </section>
+    <!-- End title side-->
+  
+    <!-- Spotlight -->
+    <section class="slice slice-lg bg-section-secondary delimiter-top delimiter-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            
+            <div class="text-center" id="formularzOgloszenia">
+            <h1 class="mb-0 mt-4">Job offer - <b class="text-primary">VIP <i class="far fa-gem"></i></b></h1>
+            </div>
+            
+        <div class="row mt-5">
+<ul class="nav nav-pills nav-pills-circle nav-pills-connect nav-justified">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">
+            <i class="fas fa-marker fa-2x"></i>
+        </a>
+        1. Create
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="far fa-eye fa-2x"></i>
+        </a>
+        2. Checked
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-plus fa-2x"></i>
+        </a>
+        3. Post
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="far fa-thumbs-up fa-2x"></i>
+        </a>
+        4. Success
+    </li>
+</ul>
+        </div>
+            
+            <form method="POST" action="#dodajPojazd">
+            {% csrf_token %}
+              <div class="card shadow mt-5" id="dodajPojazd">
+                <div class="card-body px-lg-5 py-lg-5">
+                  <h4 class="mb-4"><i class="fas fa-hotel mr-2"></i> Informations about company</h4>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 mb-0">
+                      {{ form.company|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                      {{ form.website|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-12 mb-0">
+                      {{ form.employ_numbers|as_crispy_field }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow mt-5">
+                <div class="card-body px-lg-5 py-lg-5">
+                  <h4 class="mb-4"><i class="far fa-file-alt mr-2"></i> Contract data</h4>
+                  <div class="form-row">
+                    <div class="form-group col-md-4 mb-0">
+                      {{ form.contract_type|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-4 mb-0">
+                      {{ form.salary_st|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-4 mb-0">
+                      {{ form.salary_end|as_crispy_field }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow mt-5">
+                <div class="card-body px-lg-5 py-lg-5">
+                <h4 class="mb-4"><i class="fas fa-user-friends mr-2"></i> Details of job offer</h4>
+                  <div class="form-row">
+                    <div class="form-group col-md-12 mb-0">
+                      {{ form.title|as_crispy_field }}
+                    </div>
+                    
+                    <div class="form-group col-md-6 mb-0">
+                      {{ form.experience_st|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0">
+                      {{ form.experience_end|as_crispy_field }}
+                    </div>
+                    
+                    <div class="form-group col-md-12 mb-0">
+                      {{ form.description|as_crispy_field }}
+                    </div>
+                    
+                    <div class="form-group col-md-12 mb-0">
+                      <input type="text" class="form-control" value="HTML, CSS3, Bootstrap, Photoshop, VueJS" data-toggle="tags" placeholder="Type here" />
+                    </div>
+                    
+                    <div class="form-group col-md-6 mb-0 mt-3">
+                      {{ form.location_city|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-6 mb-0 mt-3">
+                      {{ form.location_street|as_crispy_field }}
+                    </div>
+                    
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12 mb-0">
+
+<div class="text-center">
+      <h5 class="mt-4 mb-4">Choice your Job Category</h5>
+      <div class="mb-4">
+        <span class="badge badge-dark badge-md mr-2">
+            <i class="fas fa-laptop-code"></i>All
+        </span>
+      
+        <span class="badge badge-primary badge-md mr-2">
+            <i class="fas fa-laptop-code"></i>Programing
+        </span>
+
+        <span class="badge badge-warning badge-md mr-2 ml-2">
+            <i class="fas fa-bullhorn"></i>Marketing
+        </span>
+
+        <span class="badge badge-success badge-md mr-2 ml-2">
+            <i class="fas fa-brain"></i>Science
+        </span>
+
+        <span class="badge badge-danger badge-md mr-2 ml-2">
+            <i class="fas fa-tv"></i>Media
+        </span>
+      </div>
+
+      <div class="mb-0">
+        <span class="badge badge-warning badge-md mr-2 ml-2">
+            <i class="far fa-chart-bar"></i>IT
+        </span>
+
+        <span class="badge badge-info badge-md mr-2 ml-2">
+            <i class="fas fa-pencil-ruler"></i>Design
+        </span>
+
+        <span class="badge badge-secondary badge-md mr-2 ml-2">
+            <i class="fas fa-angle-down"></i>More
+        </span>
+      </div>
+</div>
+
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+              
+              <div class="card shadow mt-5">
+                <div class="card-body px-lg-5 py-lg-5">
+                  <h4 class="mb-4"><i class="fas fa-info-circle mr-2"></i> Aditional information</h4>
+                  <div class="form-row">
+                    <div class="form-group col-md-12 mb-0">
+                      {{ form.job_apply|as_crispy_field }}
+                    </div>
+                    <div class="form-group col-md-12 mb-0 mt-3">
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+    <label class="custom-control-label" for="customRadioInline1">Classic application consent</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+    <label class="custom-control-label" for="customRadioInline2">My individual application consent</label>
+</div>
+<textarea class="form-control" placeholder="I agree to the processing of my personal data blah blah blah blah blah" rows="3" disabled></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="text-center mt-6 mb-5">
+<button type="button" class="btn btn-animated btn-primary btn-lg rounded-pill btn-animated-x">
+    <span class="btn-inner--visible">Next step <i class="fas fa-chevron-right ml-1"></i></span>
+    <span class="btn-inner--hidden">
+        <i class="fas fa-arrow-right"></i>
+    </span>
+</button>
+              </div>
+            </form>
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+  </div>
+  
+  
+  <footer class="footer p-0 footer-light bg-section-secondary" id="footer-main">
+    <div class="container">
+      <div class="py-4">
+        <div class="row align-items-md-center">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="d-flex align-items-center">
+              <p class="text-sm mb-0">&copy; HireIn.IT 2020. All rights reserved.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../../pages/utility/support.html">Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../pages/utility/terms.html">Terms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../pages/utility/privacy.html">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://dribbble.com/webpixels" target="_blank">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/webpixelsofficial" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="{% static 'assets/js/purpose.core.js' %}"></script>
+  <!-- Page JS -->
+  <script src="{% static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+  <!-- Purpose JS -->
+  <script src="{% static 'assets/js/purpose.js' %}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+    //paste this code under head tag or in a seperate js file.
+    // Wait for window load
+    $(window).load(function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");;
+    });
+  </script>
+</body>
+
+</html>

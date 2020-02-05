@@ -1,0 +1,41 @@
+{% load static %}
+  <header class="header header-transparent" id="header-main">
+    <!-- Main navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-dark bg-dark" id="navbar-main">
+      <div class="container-fluid px-lg-0">
+        <!-- Logo -->
+        <a class="navbar-brand mr-lg-5" href="#">
+          <div class="d-none d-md-block">
+            <img alt="Image placeholder" src="{% static 'assets/img/brand/logo.png' %}" id="navbar-logo" style="height: 65px;">
+          </div>
+          <div class="d-md-none">
+            <img alt="Image placeholder" src="{% static 'assets/img/brand/logo.png' %}" id="navbar-logo" style="height: 65px;">
+          </div>
+        </a>
+        <!-- Navbar collapse trigger -->
+        <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar nav -->
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="nav-item mr-0">
+              <a href="#" class="nav-link d-lg-none">Post an ad</a>
+              <a href="#" class="btn btn-white d-none d-lg-inline-flex" data-toggle="tooltip" data-placement="left" title="Post you're escort">
+                Post Job
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
